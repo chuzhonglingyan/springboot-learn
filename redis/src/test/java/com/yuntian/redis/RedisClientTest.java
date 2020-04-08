@@ -79,7 +79,7 @@ public class RedisClientTest {
     @Test
     void testUserStack() {
         String listKey="nums";
-        redisStack.push(listKey, Arrays.asList(1,2,4,7,8),60*5);
+        redisStack.push(listKey, 1,2,3);
         System.out.println(redisStack.getAll(listKey));
         redisStack.pop(listKey);
         System.out.println(redisStack.getAll(listKey));

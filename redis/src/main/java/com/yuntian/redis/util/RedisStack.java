@@ -3,8 +3,6 @@ package com.yuntian.redis.util;
 import org.springframework.data.redis.core.ListOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 import javax.annotation.Resource;
 
@@ -30,27 +28,16 @@ public class RedisStack {
         return redisTemplate.opsForList();
     }
 
-    /**
-     * 入栈
-     *
-     * @param key
-     * @param v
-     * @param time
-     * @param <V>
-     */
-    public <V> void push(String key, V v, long time) {
-        push(getKey(key), Collections.singletonList(v), time);
-    }
+
 
     /**
      * 入栈
      *
      * @param key
-     * @param time
      * @param <V>
      */
-    public <V> void push(String key, Collection<V> values, long time) {
-        getOp().rightPushAll(getKey(key), values, time);
+    public <V> void push(String key, V... values) {
+        getOp().rightPushAll(getKey(key), values);
     }
 
     /**
@@ -65,11 +52,11 @@ public class RedisStack {
 
 
     public <V> List<V> getAll(String key) {
-        return (List<V>) getOp().range(key, 0, -1);
+        return (List<V>) getOp().range(getKey(key), 0, -1);
     }
 
     public <V> V get(String key, long index) {
-        return (V) getOp().index(key, index);
+        return (V) getOp().index(getKey(key), index);
     }
 
 
