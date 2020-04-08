@@ -1,0 +1,20 @@
+
+spring:
+  redis:
+    timeout: 6000ms
+    password: qwer944610721
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+    #sentinel哨兵配置
+    sentinel:
+      master: mymaster
+      nodes:
+        - 121.199.71.179:26379
+        - 121.199.71.179:26380
+        - 121.199.71.179:26381
+
+

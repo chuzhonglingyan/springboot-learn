@@ -1,0 +1,35 @@
+-Xms: 初始堆大小
+-Xmx: 最大堆大小
+-Xmn: 年轻代大小
+-XX:+PrintGCDetails 打印gc日志详情
+-XX:SurvivorRatio=8 eden与survivor的比例，当为8的时候，eden占年轻代的80%，survivor区总的占20%，但survivor区要再分成两个survivor，所以，survivor大小为10%
+-XX:MinHeapFreeRatio=minimum 堆中最小空闲大小的比例
+-XX:MaxHeapFreeRatio=maximum 堆中最大空闲大小的比例
+-XX:NewRatio=ratio 年轻代与老年代的比例关系，但要注意的是，默认情况下为2，即老年代占2/3，年轻代占1/3
+-XX:NewSize=size 新生代最小值
+-XX:MaxNewSize=size 新生代最大值
+-XX:+AggressiveHeap
+
+
+-XX:+PrintGC 输出GC日志
+
+-XX:+PrintGCDetails 输出GC的详细日志
+
+-XX:+PrintGCTimeStamps 输出GC的时间戳（以基准时间的形式）
+
+-XX:+PrintGCDateStamps 输出GC的时间戳（以日期的形式）
+
+-XX:+PrintHeapAtGC 在进行GC的前后打印出堆的信息
+
+-Xloggc:../logs/gc.log 日志文件的输出路径
+
+
+
+
+-XX:+PrintGCTimeStamps
+
+-XX:+PrintGCDetails
+-XX:+PrintGCDateStamps
+-XX:+PrintHeapAtGC
+-Xloggc:../logs/gc.log
+

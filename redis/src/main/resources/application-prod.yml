@@ -1,0 +1,22 @@
+spring:
+  redis:
+    timeout: 3000ms
+    password: qwer944610721
+
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+    #分布式集群配置
+    cluster:
+        nodes:
+        - 121.199.71.179:6391
+        - 121.199.71.179:6392
+        - 121.199.71.179:6393
+        - 121.199.71.179:6394
+        - 121.199.71.179:6395
+        - 121.199.71.179:6396
+
+

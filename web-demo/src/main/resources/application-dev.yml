@@ -1,0 +1,36 @@
+server:
+  port: 9091
+  servlet:
+    context-path: /
+#  ssl:
+#    key-store: classpath:test.jks
+#    key-store-password: xxxxx
+
+spring:
+  thymeleaf:
+    cache: false
+    mode: HTML
+    #在构建URL时添加到视图名称前的前缀（默认值：classpath:/templates/）
+    prefix: classpath:/templates/
+
+  redis:
+    #redis单机配置
+    host: 127.0.0.1
+    port: 6379
+    # 选择redis的数据库的分库
+    database: 5
+    #redis连接池配置
+    lettuce:
+      pool:
+        max-idle: 8
+        min-idle: 2
+        max-active: 8
+        max-wait: 3000ms
+  session:
+    store-type: redis
+    timeout: PT1M    #默认30M 超时时间
+    redis:
+      namespace: webtest:session
+    cookie:
+      timeout: PT1M
+

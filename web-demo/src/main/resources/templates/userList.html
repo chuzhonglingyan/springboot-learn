@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>用户列表</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<div style="text-align: center;margin:0 auto;width: 1000px; ">
+    <h1>用户列表</h1>
+    <table width="100%" border="1" cellspacing="1" cellpadding="0">
+        <tr>
+            <td>用户名</td>
+            <td>年龄</td>
+            <td>性别</td>
+        </tr>
+        <tr th:each="user: ${users}">
+            <td th:text="${user.name}">用户名</td>
+            <td th:text="${user.age}">年龄</td>
+            <td th:text="${user.sex}">性别</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

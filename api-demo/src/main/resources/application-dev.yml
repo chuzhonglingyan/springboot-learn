@@ -1,0 +1,21 @@
+
+server:
+  port: 8433
+  http:
+      port: 8091
+  ssl:
+    key-store: classpath:ssl/keystore.p12
+    key-store-password: 944610721
+    keyStoreType: PKCS12
+    keyAlias: api-demo
+  servlet:
+    session:
+      timeout: 30m
+    context-path: /
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 400        #最大线程数
+    max-connections: 10000   #接受和处理的最大连接数
+    min-SpareThreads: 20     #初始化时创建的线程数
+    acceptCount: 400         #可以放到处理队列中的请求数
+
