@@ -3,7 +3,7 @@
     {
       "name": "spring.datasource.dynamic.patterns",
       "type": "java.util.Collection<java.lang.String>",
-      "sourceType": "ccom.yuntian.dynamic.datasource.spring.boot.autoconfigure.MultiDataSourceProperties"
+      "sourceType": "com.yuntian.dynamic.datasource.spring.boot.autoconfigure.MultiDataSourceProperties"
     },
     {
       "name": "spring.datasource.druid.master.url",
