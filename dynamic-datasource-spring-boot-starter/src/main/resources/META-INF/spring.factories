@@ -1,0 +1,1 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.yuntian.dynamic.datasource.spring.boot.autoconfigure.MultiDataSourceAutoConfiguration
