@@ -1,11 +1,9 @@
 package com.yuntian.webdemo.api.controller;
 
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+import com.yuntian.webdemo.common.Result;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
 
 /**
  * @author guangleilei.
@@ -13,12 +11,12 @@ import org.springframework.web.servlet.ModelAndView;
  * @description
  */
 @RestController
-@RequestMapping("user")
+@RequestMapping("order")
 public class OrderController {
 
     @PostMapping("/createOrder")
-    public ModelAndView createOrder(Model model) {
-        return new ModelAndView("userList");
+    public Result createOrder() {
+        return new Result();
     }
 
 }

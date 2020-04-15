@@ -29,7 +29,7 @@ public class ProduceData {
                 goodSKUDTOS.add(goodSKUDTO);
             }
         }
-        orderDTO.setGoodSKUList(goodSKUDTOS);
+        orderDTO.setGoodSkulist(goodSKUDTOS);
         orderDTO.setUserId(SnowIdUtils.uniqueLong());
         log.info(JSON.toJSONString(orderDTO));
     }

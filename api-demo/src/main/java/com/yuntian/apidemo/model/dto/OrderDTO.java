@@ -12,7 +12,7 @@ import java.util.List;
 @Data
 public class OrderDTO {
 
-    private List<GoodSKUDTO> goodSKUList;
+    private List<GoodSKUDTO> goodSkulist;
 
     private Long userId;
 

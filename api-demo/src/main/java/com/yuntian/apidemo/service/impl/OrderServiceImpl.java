@@ -22,9 +22,10 @@ import java.util.concurrent.ThreadLocalRandom;
 public class OrderServiceImpl  implements OrderService {
 
 
+
     @Override
     public Long createOrder(OrderDTO orderDTO) {
-        List<GoodSKUDTO> skuIdList=orderDTO.getGoodSKUList();
+        List<GoodSKUDTO> skuIdList=orderDTO.getGoodSkulist();
         List<GoodSKU> goodSKUSInfo=new ArrayList<>();
         for (int i = 0; i < skuIdList.size(); i++) {
             GoodSKUDTO goodSKUDTO=skuIdList.get(i);
