@@ -12,7 +12,7 @@ import java.util.Random;
 
 @Slf4j
 @SpringBootTest
-class MybatisDemoApplicationTests {
+class MybatisDynamicDemoApplicationTests {
     @Resource
     private CourseService courseService;
 

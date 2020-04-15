@@ -7,10 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @MapperScan("com.yuntian.mybatisdynamic.dao")
 @SpringBootApplication(exclude = DruidDataSourceAutoConfigure.class)
-public class MybatisDemoApplication {
+public class MybatisDynamicDemoApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MybatisDemoApplication.class, args);
+        SpringApplication.run(MybatisDynamicDemoApplication.class, args);
     }
 
 }
