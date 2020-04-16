@@ -6,6 +6,8 @@ import com.yuntian.apidemo.model.dto.OrderDTO;
 import com.yuntian.apidemo.util.SnowIdUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
+
+import javax.sound.midi.Soundbank;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,6 +34,12 @@ public class ProduceData {
         orderDTO.setGoodSkulist(goodSKUDTOS);
         orderDTO.setUserId(SnowIdUtils.uniqueLong());
         log.info(JSON.toJSONString(orderDTO));
+    }
+
+    @Test
+    void testKK() {
+
+
     }
 
 }

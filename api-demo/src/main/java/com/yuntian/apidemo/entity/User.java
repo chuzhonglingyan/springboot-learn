@@ -1,5 +1,6 @@
 package com.yuntian.apidemo.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
@@ -7,15 +8,10 @@ import lombok.Data;
  * @date Created in 17:27 2019/10/18
  * @description
  */
+@AllArgsConstructor
 @Data
 public class User {
 
-
-    public User(String name, Integer age, String sex) {
-        this.name = name;
-        this.age = age;
-        this.sex = sex;
-    }
 
     private Long id;
 
