@@ -25,6 +25,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
     /**
      * 添加资源拦截器 路径映射真正的目录
+     *
      * @param registry
      */
     @Override
@@ -41,7 +42,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     }
 
     @Bean
-    CookieSerializer cookieSerializer(){
+    CookieSerializer cookieSerializer() {
         DefaultCookieSerializer serializer = new DefaultCookieSerializer();
         serializer.setCookieName("SESSION");
         serializer.setCookieMaxAge((int) cookieProperties.getTimeout().getSeconds());
